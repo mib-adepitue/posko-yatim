@@ -55,7 +55,7 @@ class Laporan extends Controller
                             ->whereMonth('created_at', '=', $request->get('month'))
                             ->sum('jumlah_total');
 
-            $totalinfak     = \App\kegiataninfak::whereYear('created_at', '=', $request->get('year'))
+            $totalinfak     = \App\Kegiataninfak::whereYear('created_at', '=', $request->get('year'))
                             ->whereMonth('created_at', '=', $request->get('month'))
                             ->sum('jumlah');
 
@@ -92,7 +92,7 @@ class Laporan extends Controller
             // dd($distinctyear);
 
             $totalbeasiswa  = \App\Beasiswa::sum('jumlah_total');
-            $totalinfak     = \App\kegiataninfak::sum('jumlah');
+            $totalinfak     = \App\Kegiataninfak::sum('jumlah');
             $totalukm       = \App\Ukm::sum('jumlah_total');
             $totalkeseluruhan   = $totalukm + $totalbeasiswa + $totalinfak ;
             $year   = "";
