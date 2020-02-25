@@ -1,0 +1,2 @@
+jika Tidak Import dari database 'devtekbo_posko_yatim' dari folder ini atau menggunakan 'php artisan migrate'
+Maka isilah table 'totaldonasis' terlebih dahulu dengan id 1
